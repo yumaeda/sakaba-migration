@@ -18,4 +18,4 @@ jobs:
           curl -L https://github.com/golang-migrate/migrate/releases/download/v4.12.2/migrate.linux-amd64.tar.gz | tar xvz
           sudo mv migrate.linux-amd64 /usr/bin/migrate
       - name: Run migration
-        run: migrate -path db/migration -verbose -database "mysql://${{ secrets.DB_USER }}:${{ secrets.DB_PASSWORD }}@tcp(${{ secrets.DB_HOST }}:${{ secrets.DB_PORT }})/tokyo_takeout?sslmode=disable" up
+        run: migrate -path db/migration -verbose -database 'mysql://${{ secrets.DB_USER }}:${{ secrets.DB_PASSWORD }}@tcp(54.199.44.194:3306)/tokyo_takeout' up
