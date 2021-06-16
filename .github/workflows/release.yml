@@ -22,5 +22,4 @@ jobs:
           DB_HOST: ${{ secrets.DB_HOST }}
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          DB_PORT: ${{ secrets.DB_PORT}}
-        run: migrate -path db/migration -verbose -database 'mysql://admin:${DB_PASSWORD}@tcp(${DB_HOST}:${DB_PORT})/tokyo_takeout' up
+        run: migrate -path db/migration -verbose -database 'mysql://admin:${DB_PASSWORD}@tcp(${DB_HOST}:3306)/tokyo_takeout' up
