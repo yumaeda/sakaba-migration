@@ -36,3 +36,10 @@ migrate -path db/migration -verbose -database 'mysql://root:mypass@tcp(0.0.0.0:3
 ```
 
 - `schema_migrations` table stores the migration version and the status of the last migration.
+
+
+## Create Functions
+### Enable `log_bin_trust_function_creators` flag.
+- Login to AWS Console.
+- Create a new "Parameter Group" and set `log_bin_trust_function_creators` to `1`.
+- Update the instance to use the new parameter group.
