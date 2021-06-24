@@ -1,4 +1,4 @@
-INSERT INTO wines (id, cepage, color, comment, country, name, name_jpn, region, region_jpn, vintage)
+INSERT INTO wines (id, cepage, color, comment, country, name, name_jpn, producer, producer_jpn, region, region_jpn, vintage)
      VALUES (
          UuidToBin(UUID()),
          'ピノ・グリ100%',
@@ -7,6 +7,8 @@ INSERT INTO wines (id, cepage, color, comment, country, name, name_jpn, region, 
          'New Zealand',
          'Marlborough Homecreek Pinot Gris',
          'マールボロ・ホームクリーク・ピノ・グリ',
+         'Southern Boundary Wines',
+         'サザン・バウンダリー・ワインズ'
          'South Island',
          '南島' ,
          '2018'
