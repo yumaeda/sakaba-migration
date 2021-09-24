@@ -1,4 +1,4 @@
-# tokyo-takeout-migration
+# sakaba-migration
 ## Preparation
 ```sh
 brew install golang-migrate
@@ -15,7 +15,7 @@ migrate create -ext sql -dir db/migration -seq <Migration Name>
 
 ## Launch MariaDB server inside a Docker container
 ```sh
-docker run --name tokyo_takeout_db -e MYSQL_ROOT_PASSWORD=mypass -p 3306:3306 -d docker.io/library/mariadb:10.6.1
+docker run --name sakaba_db -e MYSQL_ROOT_PASSWORD=mypass -p 3306:3306 -d docker.io/library/mariadb:10.6.1
 ```
 
 &nbsp;
