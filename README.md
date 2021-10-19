@@ -25,14 +25,14 @@ docker run --name sakaba_db -e MYSQL_ROOT_PASSWORD=mypass -p 3306:3306 -d docker
 mysql -h 0.0.0.0 -P 3306 -u root -p
 ```
 
-## Create `tokyo_takeout` database
+## Create `sakaba` database
 ```sh
-CREATE DATABASE tokyo_takeout;
+CREATE DATABASE sakaba;
 ```
 
 ## Run migration
 ```sh
-migrate -path db/migration -verbose -database 'mysql://root:mypass@tcp(0.0.0.0:3306)/tokyo_takeout' up
+migrate -path db/migration -verbose -database 'mysql://root:mypass@tcp(0.0.0.0:3306)/sakaba' up
 ```
 
 - `schema_migrations` table stores the migration version and the status of the last migration.
