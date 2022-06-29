@@ -19,7 +19,6 @@ BEGIN
     RETURN 6371.009 * angularDistance;
 END;
 
-
 //
 
 DELIMITER ;
