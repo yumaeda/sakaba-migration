@@ -64,7 +64,7 @@ migrate -path ti-db/migration -verbose -database "mysql://$DB_ADMIN:$DB_PWD@tcp(
 
 ### Connect
 ```sh
-mysql --comments -u $DB_ADMIN -h $DB_HOST -P $DB_PORT -D $DB_NAME --ssl-mode=VERIFY_IDENTITY --ssl-ca=/etc/ssl/cert.pem -p $DB_PWD
+mysql --comments -u $DB_ADMIN -h $DB_HOST -P $DB_PORT -D $DB_NAME --ssl-mode=VERIFY_IDENTITY --ssl-ca=/etc/ssl/cert.pem -p$DB_PWD
 
 SET GLOBAL tidb_skip_isolation_level_check=1;
 ```
