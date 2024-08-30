@@ -1,2 +1,0 @@
-ALTER TABLE restaurants
-     MODIFY id BINARY(16) DEFAULT NULL;

@@ -1,2 +1,0 @@
-ALTER TABLE restaurants
-     MODIFY id INT NOT NULL AUTO_INCREMENT;
