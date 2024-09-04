@@ -10,7 +10,7 @@ brew install mysql
 
 ## Create migration files
 ```sh
-migrate create -ext sql -dir ti-db/migration -seq <Migration Name>
+migrate create -ext sql -dir db/migration -seq <Migration Name>
 ```
 
 &nbsp;
@@ -27,7 +27,7 @@ export DB_NAME=test
 
 ### Run migration
 ```sh
-migrate -path ti-db/migration -verbose -database "mysql://$DB_ADMIN:$DB_PWD@tcp($DB_HOST:$DB_PORT)/$DB_NAME?tls=true&charset=utf8&parseTime=True&loc=Local" up
+migrate -path db/migration -verbose -database "mysql://$DB_ADMIN:$DB_PWD@tcp($DB_HOST:$DB_PORT)/$DB_NAME?tls=true&charset=utf8&parseTime=True&loc=Local" up
 ```
 - `schema_migrations` table stores the migration version and the status of the last migration.
 
