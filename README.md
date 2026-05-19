@@ -1,6 +1,6 @@
 # sakaba-migration
 ## Preparation
-```sh
+```zsh
 brew install golang-migrate
 
 brew install mysql
@@ -17,7 +17,7 @@ migrate create -ext sql -dir db/migration -seq <Migration Name>
 
 ## TiDB
 ### Preparation
-```sh
+```zsh
 export DB_ADMIN=xxxx
 export DB_PWD=xxxx
 export DB_HOST=gateway01.ap-northeast-1.prod.aws.tidbcloud.com
@@ -32,8 +32,14 @@ migrate -path db/migration -verbose -database "mysql://$DB_ADMIN:$DB_PWD@tcp($DB
 - `schema_migrations` table stores the migration version and the status of the last migration.
 
 ### Connect
-```sh
+## CLI
+```zsh
 mysql --comments -u $DB_ADMIN -h $DB_HOST -P $DB_PORT -D $DB_NAME --ssl-mode=VERIFY_IDENTITY --ssl-ca=/etc/ssl/cert.pem -p$DB_PWD
 
 SET GLOBAL tidb_skip_isolation_level_check=1;
+```
+
+## TablePlus
+```zsh
+brew install --cask tableplus
 ```
